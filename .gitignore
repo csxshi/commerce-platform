@@ -1,8 +1,38 @@
+# =====================
+# IntelliJ IDEA
+# =====================
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# =====================
+# Maven
+# =====================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# =====================
+# Spring Boot
+# =====================
+# ログファイル
+logs/
+*.log
+
+# 環境の設定ファイル
+application-local.yml
+application-dev.yml
+application-test.yml
+
+# =====================
+# OS
+# =====================
+.DS_Store
+Thumbs.db
+
 # Compiled class file
 *.class
-
-# Log file
-*.log
 
 # BlueJ files
 *.ctxt

@@ -15,15 +15,35 @@ target/
 
 # =====================
 # Spring Boot
-# =====================
 # ログファイル
+# =====================
 logs/
 *.log
 
+# =====================
 # 環境の設定ファイル
+# =====================
 application-local.yml
-application-dev.yml
-application-test.yml
+application-prod.yml
+
+!application.yml
+!application-dev.yml.example
+!application-test.yml.example
+
+# =====================
+# Frontend (Vue / npm)
+# =====================
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+
+# =====================
+# Docker / DB
+# =====================
+db_data/
+docker-data/
 
 # =====================
 # OS
@@ -31,16 +51,24 @@ application-test.yml
 .DS_Store
 Thumbs.db
 
+# =====================
 # Compiled class file
+# =====================
 *.class
 
+# =====================
 # BlueJ files
+# =====================
 *.ctxt
 
+# =====================
 # Mobile Tools for Java (J2ME)
+# =====================
 .mtj.tmp/
 
-# Package Files #
+# =====================
+# Package Files
+# =====================
 *.jar
 *.war
 *.nar
@@ -49,6 +77,9 @@ Thumbs.db
 *.tar.gz
 *.rar
 
+# =====================
+# JVM crash logs
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# =====================
 hs_err_pid*
 replay_pid*

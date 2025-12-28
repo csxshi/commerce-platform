@@ -26,12 +26,12 @@ commerce-platformはECサイトシステムである。
 
 
 
-##　プロジェクト構成
+## プロジェクト構成
 commerce-platform/
-　- backend/     　 # Spring Boot
-　-  frontend/         # Vue 3
-　-  nginx/               # Nginx config
-　- db/                    # DB init script
-　- docker-compose.yml
-　- .env.example
-　- README.md
+  - backend/     　 # Spring Boot
+  -  frontend/         # Vue 3
+  -  nginx/               # Nginx config
+  - db/                    # DB init script
+  - docker-compose.yml
+  - .env.example
+  - README.md

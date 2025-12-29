@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  mariadb:
+    image: mariadb:lts-ubi9
+    container_name: ec-mariadb-dev
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      EC_APP_USERNAME: ${EC_APP_USERNAME}
+      EC_APP_PASSWORD: ${EC_APP_PASSWORD}
+      EC_MIGRATE_USERNAME: ${EC_MIGRATE_USERNAME}
+      EC_MIGRATE_PASSWORD: ${EC_MIGRATE_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./ec-docker/mariadb/initdb:/docker-entrypoint-initdb.d
+      - ./db-data:/var/lib/mysql
+
+  app:
+    build: ./docker/app
+    container_name: ec-app
+    depends_on:
+      - mariadb
+    environment:
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILE}
+      EC_APP_PASSWORD: ${EC_APP_PASSWORD}
+      EC_MIGRATE_PASSWORD: ${EC_MIGRATE_PASSWORD}

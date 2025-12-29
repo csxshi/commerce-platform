@@ -42,4 +42,4 @@ commerce-platform/
 
 - Java:21(LTS)
 - Spring Boot 4.0.1
-- MariaDB 10.11（LTS）
+- MariaDB lts-ubi9（LTS）

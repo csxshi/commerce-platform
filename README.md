@@ -28,10 +28,18 @@ commerce-platformはECサイトシステムである。
 
 ## プロジェクト構成
 commerce-platform/
-  - backend/     　 # Spring Boot
-  -  frontend/         # Vue 3
-  -  nginx/               # Nginx config
-  - db/                    # DB init script
+  - ec-backend/     　 # Spring Boot
+  -  ec-frontend/         # Vue 3
+  -  ec-nginx/               # Nginx config
+  - ec-db/                    # DB init script
   - docker-compose.yml
   - .env.example
   - README.md
+
+
+
+## バージョン
+
+- Java:21(LTS)
+- Spring Boot 4.0.1
+- MariaDB 10.11（LTS）

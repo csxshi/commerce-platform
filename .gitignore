@@ -24,11 +24,18 @@ logs/
 # 環境の設定ファイル
 # =====================
 application-local.yml
+application-dev.yml
 application-prod.yml
+application-local.properties
+application-dev.properties
+application-prod.properties
 
 !application.yml
 !application-dev.yml.example
 !application-test.yml.example
+!application.properties
+!application-dev.properties.example
+!application-test.properties.example
 
 # =====================
 # Frontend (Vue / npm)
